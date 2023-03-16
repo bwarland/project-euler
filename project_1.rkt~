@@ -1,7 +1,0 @@
-;; Project Euler
-;; multiples of 3 and 5
-
-
-(define (multiple-of-3? number)
-  (if (/ 
-

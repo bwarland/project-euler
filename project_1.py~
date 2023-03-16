@@ -1,5 +1,0 @@
-# Project Euler problem 001
-# sum all multiples of 3 and 5 below 1000
-
-def multiple_of_3(number):
-    number%3==0
