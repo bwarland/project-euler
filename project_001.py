@@ -13,6 +13,8 @@ def multiple_of_3_or_5(number):
 integers_to_10=list(range(0,10))
 integers_to_1000=list(range(0,1000))
 
+
+
 def sum_if_multiple_of_3_or_5(list_of_numbers):
     total=0
     for integer in list_of_numbers:
@@ -22,5 +24,6 @@ def sum_if_multiple_of_3_or_5(list_of_numbers):
             pass
     return total
 
-# assert sum_if_multiple_of_3_or_5(integers_to_10)==23
-# assert sum_if_multiple_of_3_or_5(integers_to_1000)==233168
+
+#assert sum_if_multiple_of_3_or_5(integers_to_10)==23
+#assert sum_if_multiple_of_3_or_5(integers_to_1000)==233168
