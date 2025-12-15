@@ -17,9 +17,7 @@ divisors = [2, 3, 4, 5]
 
 print(divisible_by_all(n, divisors))  
         
-# def number_divisible_by_all(n, divisors):
-#     number=1
-#     if divisible_by_all(number, divisors):
-#         return number
-#     else:
+def divisible_by_listofnumbers(divisors):
+    number=1
+    if divisible_by_all(number)
         
