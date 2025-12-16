@@ -23,15 +23,23 @@
 (define list-to-10 (rest (build-list 11 values)))
 (define list-to-20 (rest (build-list 21 values)))
 
-;; divisible-by-all: alist-of-numbers -> number
+;; smallest-multiple: alist-of-numbers -> number
 ;; checks if a number is integer divisible by a list of numbers
 
-(define (smallest-multiple number a-list-of-numbers)
-  (cond
-    [(equal? (divisible-by-all-in-list? number a-list-of-numbers) #true) number]
-    [else (smallest-multiple (+ number 1) a-list-of-numbers)]))
+;; kladd
+;; (define (smallest-multiple number a-list-of-numbers)
+;;   (cond
+;;     [(equal? (divisible-by-all-in-list? number a-list-of-numbers) #true) number]
+;;     [else (smallest-multiple (+ number 1) a-list-of-numbers)]))
+
+(define (smallest-multiple a-list-of-numbers)
+  (define (inner-iteration number a-list-of-numbers)
+    (cond
+      [(equal? (divisible-by-all-in-list? number a-list-of-numbers) #true) number]
+      [else (inner-iteration (+ number 1) a-list-of-numbers)]))
+    (inner-iteration 1 a-list-of-numbers))
   
-;; (equal? (smallest-multiple 1 list-to-10) 2520) ;; #true
-;; (equal? (smallest-multiple 1 list-to-20) 232792560);; #true
+;; (equal? (smallest-multiple list-to-10) 2520) ;; #true
+;; (equal? (smallest-multiple list-to-20) 232792560);; #true
 
        
